@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="BingoGame.Views.BingoNumberSetView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BingoGame.Views"
+             xmlns:elements="clr-namespace:BingoGame.Elements"
+             mc:Ignorable="d">
+    <ItemsControl ItemsSource="{Binding Numbers}">
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <elements:StretchPanel Orientation="Horizontal"/>
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <local:BingoNumberView/>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
+</UserControl>
